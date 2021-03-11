@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2265339818883229004}
   - component: {fileID: 2265339818883229003}
   - component: {fileID: 2265339818883229002}
+  - component: {fileID: -166979147866729910}
   m_Layer: 0
   m_Name: FallingObject
   m_TagString: Untagged
@@ -99,3 +100,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00308609}
   serializedVersion: 2
   m_Radius: 0.46605253
+--- !u!114 &-166979147866729910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265339818883229001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2473adf18e8fad64bbfeaabc3657c67c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 6
