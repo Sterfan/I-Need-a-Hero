@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
+            Debug.Log("Eat my healthy butt!");
             SceneManager.LoadScene("Sidescroller");
         }
     }
