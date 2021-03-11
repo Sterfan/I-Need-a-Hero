@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollow_SS : MonoBehaviour
 {
     public Transform player;
+    public float cameraEndX = -16.5f;
 
     float camOffset;
 
@@ -16,7 +17,11 @@ public class CameraFollow_SS : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(player.position.x + camOffset, transform.position.y, transform.position.z);
+        //Debug.Log(transform.localPosition.x);
+        if (transform.localPosition.x > cameraEndX)
+        {
+            transform.position = new Vector3(player.position.x + camOffset, transform.position.y, transform.position.z);
+        }
     }
 
 }
