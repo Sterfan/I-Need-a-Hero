@@ -47,7 +47,7 @@ public class RandomSpawner : MonoBehaviour
     private void SpawnObject()
     {
         objectToSpawn = fallingObjects[Random.Range(0, fallingObjects.Length)];
-        GameObject clone = Instantiate(objectToSpawn, RandomizePosition(), Quaternion.identity);
+        GameObject clone = Instantiate(objectToSpawn, RandomizePosition(), Quaternion.Euler(new Vector3(-180, 0, 0)));
         Destroy(clone, destructionTime);
     }
 
