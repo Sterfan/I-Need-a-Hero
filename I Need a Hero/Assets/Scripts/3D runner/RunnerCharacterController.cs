@@ -38,7 +38,7 @@ public class RunnerCharacterController : MonoBehaviour
 
         foreach (var groundCheck in groundChecks)
         {
-            if (Physics.CheckSphere(transform.position, 0.1f, groundLayers, QueryTriggerInteraction.Ignore))
+            if (Physics.CheckSphere(groundCheck.position, 0.1f, groundLayers, QueryTriggerInteraction.Ignore))
             {
                 isGrounded = true;
                 break;
