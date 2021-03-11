@@ -150,7 +150,7 @@ public class Movement_Sidescroller : MonoBehaviour
                 CrouchInput();
                 break;
             case playerStates.Jumping:
-                if (isGrounded)
+                if (isGrounded && rb.velocity.y == 0)
                 {
                     ReturnToRunning();
                 }
