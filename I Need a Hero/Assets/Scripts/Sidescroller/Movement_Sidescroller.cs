@@ -81,6 +81,7 @@ public class Movement_Sidescroller : MonoBehaviour
     {
         if (!start && Input.GetKeyDown(KeyCode.Space))
         {
+            animator.enabled = true;
             start = true;
         }
     }
