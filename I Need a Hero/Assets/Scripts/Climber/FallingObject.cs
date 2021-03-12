@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FallingObject
 {
-    public GameObject objectToSpawn;
+    public GameObject[] objectToSpawn;
     [Tooltip("Probability in % to be spawned")]
     public int probability;
 
