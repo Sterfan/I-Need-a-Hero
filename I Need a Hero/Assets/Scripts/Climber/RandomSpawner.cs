@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public GameObject[] fallingObjects;
+    public FallingObject[] fallingObjects;
     public Camera cam;
     public float fallSpeed = 10f;
     public float destructionTime = 3.0f;
@@ -22,6 +22,18 @@ public class RandomSpawner : MonoBehaviour
 
     float intervalTimer = 0f;
 
+    List<GameObject> objectPool = new List<GameObject>();
+
+    private void Start()
+    {
+        foreach (var objectToFall in fallingObjects)
+        {
+            for (int i = 0; i < objectToFall.probability; i++)
+            {
+                objectPool.Add(objectToFall.objectToSpawn);
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,7 +58,7 @@ public class RandomSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        objectToSpawn = fallingObjects[Random.Range(0, fallingObjects.Length)];
+        objectToSpawn = objectPool[Random.Range(0, objectPool.Count)];
         GameObject clone = Instantiate(objectToSpawn, RandomizePosition(), Quaternion.Euler(new Vector3(-180, 0, 0)));
         Destroy(clone, destructionTime);
     }
