@@ -15,7 +15,7 @@ public class CameraFollow_SS : MonoBehaviour
         camOffset = transform.position.x - player.position.x;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         //Debug.Log(transform.localPosition.x);
         if (transform.localPosition.x > cameraEndX)
