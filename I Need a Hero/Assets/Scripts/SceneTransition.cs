@@ -42,7 +42,7 @@ public class SceneTransition : MonoBehaviour
         }
         if (y)
         {
-            if (player.position.y <= spotToReach.position.y)
+            if (player.position.y >= spotToReach.position.y)
             {
                 //do the stuff
                 foreach (var objectToToggle in objectsToToggle)
