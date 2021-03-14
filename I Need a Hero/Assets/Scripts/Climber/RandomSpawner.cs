@@ -8,7 +8,7 @@ public class RandomSpawner : MonoBehaviour
     public Camera cam;
     public float fallSpeed = 10f;
     public float destructionTime = 3.0f;
-    public Transform leftSpawn, rightSpawn;
+    public Transform leftSpawn, rightSpawn, maxHeight;
     [Tooltip("Probability in % to spawn a falling object every second")]
     public float probabilityToSpawn = 70;
 
@@ -38,21 +38,24 @@ public class RandomSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpeedupInterval();
-        timer += Time.deltaTime;
-        if (timer > interval)
+        if (leftSpawn.position.y < maxHeight.position.y)
         {
-            int probability = Random.Range(0, 10);
-            Debug.Log(probability);
-            if (probability < (probabilityToSpawn * 0.1f))
+            SpeedupInterval();
+            timer += Time.deltaTime;
+            if (timer > interval)
             {
-                SpawnObject();
-                if (Random.Range(0, 10) < probabilityOfDoubleObject * 0.1f)
+                int probability = Random.Range(0, 10);
+                Debug.Log(probability);
+                if (probability < (probabilityToSpawn * 0.1f))
                 {
                     SpawnObject();
+                    if (Random.Range(0, 10) < probabilityOfDoubleObject * 0.1f)
+                    {
+                        SpawnObject();
+                    }
                 }
+                timer = 0;
             }
-            timer = 0;
         }
     }
 

@@ -57,12 +57,17 @@ public class RunnerCharacterController : MonoBehaviour
         }
 
 
-        if (gameStarted)
-        {
-            SideMovement();
-            Jump();
-            RunForward();
-        }
+        //if (gameStarted)
+        //{
+        //    SideMovement();
+        //    Jump();
+        //    RunForward();
+        //}
+
+        SideMovement();
+        Jump();
+        RunForward();
+
         AssignGravity();
 
         StartGame();
