@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445254888994281973}
   - component: {fileID: 4078908130503760380}
+  - component: {fileID: 8139541302211742904}
   m_Layer: 0
   m_Name: DeathCollider
   m_TagString: Obstacle
@@ -44,6 +45,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.18097329, y: 1.8244331, z: 1.8507895}
   m_Center: {x: -0.8711721, y: -0.002141595, z: -0.07460284}
+--- !u!54 &8139541302211742904
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253291599089093545}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &7480734520855987269
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +73,7 @@ GameObject:
   - component: {fileID: 6572127691697344858}
   - component: {fileID: 8993710554676733328}
   - component: {fileID: -4335686385779584299}
+  - component: {fileID: 1429412322317353093}
   m_Layer: 0
   m_Name: CrateV2
   m_TagString: Untagged
@@ -140,3 +158,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7532501, y: 2, z: 2}
   m_Center: {x: 0.12337494, y: 0, z: 0}
+--- !u!54 &1429412322317353093
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480734520855987269}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

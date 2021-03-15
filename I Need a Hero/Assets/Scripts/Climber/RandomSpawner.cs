@@ -45,7 +45,6 @@ public class RandomSpawner : MonoBehaviour
             if (timer > interval)
             {
                 int probability = Random.Range(0, 10);
-                Debug.Log(probability);
                 if (probability < (probabilityToSpawn * 0.1f))
                 {
                     SpawnObject();
