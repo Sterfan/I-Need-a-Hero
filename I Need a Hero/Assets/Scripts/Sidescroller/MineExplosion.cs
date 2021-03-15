@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MineExplosion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void animEndDestroy()
+    public GameObject explosion;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
         Destroy(gameObject);
+        Destroy(expl, 2);
     }
 
+    //public void animEndDestroy()
+    //{
+    //    Destroy(gameObject);
+    //}
+
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
         
-    }
+    //}
 }

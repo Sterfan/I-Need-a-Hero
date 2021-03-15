@@ -19,7 +19,7 @@ public class FallingBehaviour : MonoBehaviour
 
     int RandomizeSpeed()
     {
-        int plusOrMinus = Mathf.RoundToInt(fallSpeed * 0.3f);
+        int plusOrMinus = Mathf.RoundToInt(fallSpeed * 0.2f);
         int speed = Mathf.RoundToInt(Random.Range(fallSpeed - plusOrMinus, fallSpeed + plusOrMinus + 1));
         return speed;
     }
