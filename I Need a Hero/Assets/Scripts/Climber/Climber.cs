@@ -6,11 +6,9 @@ public class Climber : MonoBehaviour
 {
     public float climbSpeed = 10f;
     public float strafeSpeed = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    public float maxXL = -121f, maxXR = -3f;
+
 
     // Update is called once per frame
     void Update()
@@ -24,6 +22,7 @@ public class Climber : MonoBehaviour
         if (Input.GetButton("Horizontal"))
         {
             transform.position += new Vector3(strafeSpeed * Input.GetAxisRaw("Horizontal"), 0, 0) * Time.deltaTime;
+            transform.position = new Vector3 (Mathf.Clamp(transform.position.x, maxXL, maxXR),transform.position.y, transform.position.z);
         }
     }
 
