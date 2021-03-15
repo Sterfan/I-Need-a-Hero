@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773052688360}
   - component: {fileID: 2172428773052688361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773150548082}
   - component: {fileID: 9021276330041613115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WireTrap
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773394969442}
   - component: {fileID: 2172428773394969443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773563368691}
   - component: {fileID: 2172428773563368688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773564268582}
   - component: {fileID: 2172428773564268583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428773721019320}
   - component: {fileID: 2172428773721019321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172428774272018019}
   - component: {fileID: 2172428774272018016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wires (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
