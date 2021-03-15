@@ -8,14 +8,13 @@ public class C_Collision : MonoBehaviour
     public GameObject ragdoll;
     public GameObject[] bodyParts;
 
+
     Climber climbScript;
 
     private void Start()
     {
         climbScript = GetComponent<Climber>();
     }
-
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
