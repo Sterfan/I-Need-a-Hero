@@ -7,14 +7,19 @@ public class C_Collision : MonoBehaviour
 {
     public GameObject ragdoll;
     public GameObject[] bodyParts;
-    public RunnerCharacterController cc;
-    public string sceneName = "Final Scene";
+
+    Climber climbScript;
+
+    private void Start()
+    {
+        climbScript = GetComponent<Climber>();
+    }
 
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             //SceneManager.LoadScene("Sidescroller");
             foreach (GameObject bp in bodyParts)
@@ -22,12 +27,7 @@ public class C_Collision : MonoBehaviour
                 bp.SetActive(false);
             }
             //ragdoll.SetActive(true);
-            Invoke("ReloadScene", 1.5f);
+            climbScript.alive = false;
         }
-    }
-
-    void ReloadScene()
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }
