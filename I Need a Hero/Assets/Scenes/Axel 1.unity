@@ -1771,7 +1771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingObjects:
-  - {fileID: 2265339818883229001, guid: 46beb8d0fb4f69d4fa6f1fe56e579bda, type: 3}
+  - objectToSpawn: {fileID: 0}
+    probability: 0
+  - objectToSpawn: {fileID: 0}
+    probability: 0
   cam: {fileID: 1791365435}
   fallSpeed: 20
   destructionTime: 3
