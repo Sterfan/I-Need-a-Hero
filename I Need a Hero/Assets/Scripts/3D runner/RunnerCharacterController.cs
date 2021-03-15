@@ -22,6 +22,7 @@ public class RunnerCharacterController : MonoBehaviour
     float jumpGracePeriod = 0.2f;
 
     bool gameStarted = false;
+    [HideInInspector] public bool alive = true;
 
 
     // Start is called before the first frame update
@@ -63,10 +64,12 @@ public class RunnerCharacterController : MonoBehaviour
         //    Jump();
         //    RunForward();
         //}
-
-        SideMovement();
-        Jump();
-        RunForward();
+        if (alive)
+        {
+            SideMovement();
+            Jump();
+            RunForward();
+        }
 
         AssignGravity();
 
