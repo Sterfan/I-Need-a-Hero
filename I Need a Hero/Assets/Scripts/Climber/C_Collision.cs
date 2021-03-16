@@ -8,14 +8,26 @@ public class C_Collision : MonoBehaviour
     public GameObject ragdoll;
     public GameObject[] bodyParts;
 
+    bool hit = false;
+    bool spawned = false;
     Climber climbScript;
+
+    public AudioSource audioSource;
 
     private void Start()
     {
         climbScript = GetComponent<Climber>();
     }
 
-
+    //private void Update()
+    //{
+    //    if (hit && !spawned)
+    //    {
+    //        Instantiate(ragdoll, transform);
+    //        hit = false;
+    //        spawned = true;
+    //    }
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,6 +39,8 @@ public class C_Collision : MonoBehaviour
                 bp.SetActive(false);
             }
             //ragdoll.SetActive(true);
+            audioSource.Play();
+            hit = true;
             climbScript.alive = false;
         }
     }

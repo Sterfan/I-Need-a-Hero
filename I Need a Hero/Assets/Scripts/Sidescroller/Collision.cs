@@ -10,6 +10,9 @@ public class Collision : MonoBehaviour
     public RunnerCharacterController cc;
     public CameraFollow_SS cam;
     public string sceneName = "Final Scene";
+    bool spawned = false;
+
+    public AudioSource audioSource;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,6 +26,12 @@ public class Collision : MonoBehaviour
             }
             //ragdoll.SetActive(true);
             cam.alive = false;
+            if (!spawned)
+            {
+                Instantiate(ragdoll, transform.position, Quaternion.identity);
+                spawned = true;
+            }
+            audioSource.Play();
             Invoke("ReloadScene", 1.5f);
         }
     }
