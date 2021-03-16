@@ -7,6 +7,7 @@ public class Movement_Sidescroller : MonoBehaviour
     public int playerSpeed = 10;
     public int playerJumpPower = 1250;
     public Animator animator;
+    public Canvas canvas;
     [SerializeField] Transform[] groundChecks;
     [SerializeField] LayerMask groundLayers;
 
@@ -82,6 +83,7 @@ public class Movement_Sidescroller : MonoBehaviour
         if (!start && Input.GetKeyDown(KeyCode.Space))
         {
             animator.enabled = true;
+            canvas.enabled = false;
             start = true;
         }
     }
