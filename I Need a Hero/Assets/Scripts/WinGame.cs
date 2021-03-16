@@ -13,11 +13,11 @@ public class WinGame : MonoBehaviour
     public GameObject blackOutSquare;
     float fadeSpeed = 1f;
     public Animator animator;
-    AudioSource songTrack;
+    //AudioSource songTrack;
 
     private void Start()
     {
-        songTrack = GameObject.FindGameObjectWithTag("Song").GetComponent<AudioSource>();
+        //songTrack = GameObject.FindGameObjectWithTag("Song").GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,7 +39,7 @@ public class WinGame : MonoBehaviour
             yield return null;
         }
         //yield return new WaitForSeconds(1);
-        songTrack.Stop();
+        //songTrack.Stop();
         audioSource.Play();
 
         yield return new WaitForSeconds(audioSource.clip.length);
@@ -48,7 +48,7 @@ public class WinGame : MonoBehaviour
 
     void ReloadScene()
     {
-        songTrack.Play();
+        //songTrack.Play();
         SceneManager.LoadScene(sceneName);
     }
 }
