@@ -6,14 +6,21 @@ public class MineExplosion : MonoBehaviour
 {
     public GameObject explosion;
     public AudioSource audioSource;
+    bool played = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //StartCoroutine(ExplosionSound());
-        //audioSource.Play();
-        GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
-        Destroy(gameObject);
-        Destroy(expl, 2);
+        if (!played)
+        {
+            played = true;
+            audioSource.Play();
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            Destroy(gameObject, 2);
+            Destroy(expl, 2);
+        }
     }
 
     //private IEnumerator ExplosionSound()
