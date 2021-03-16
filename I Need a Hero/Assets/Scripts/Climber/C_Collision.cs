@@ -11,6 +11,7 @@ public class C_Collision : MonoBehaviour
     bool hit = false;
     bool spawned = false;
     Climber climbScript;
+    bool played = false;
 
     public AudioSource audioSource;
 
@@ -39,7 +40,11 @@ public class C_Collision : MonoBehaviour
                 bp.SetActive(false);
             }
             //ragdoll.SetActive(true);
-            audioSource.Play();
+            if (!played)
+            {
+                played = true;
+                audioSource.Play();
+            }
             hit = true;
             climbScript.alive = false;
         }
