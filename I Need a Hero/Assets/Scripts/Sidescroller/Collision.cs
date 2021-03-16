@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
     public CameraFollow_SS cam;
     public string sceneName = "Final Scene";
     bool spawned = false;
+    bool played = false;
 
     public AudioSource audioSource;
 
@@ -18,6 +19,11 @@ public class Collision : MonoBehaviour
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
+            if (!played)
+            {
+                played = true;
+                audioSource.Play();
+            }
             Debug.Log("Eat my healthy butt!");
             //SceneManager.LoadScene("Sidescroller");
             foreach(GameObject bp in bodyParts)
@@ -31,7 +37,6 @@ public class Collision : MonoBehaviour
                 Instantiate(ragdoll, transform.position, Quaternion.identity);
                 spawned = true;
             }
-            audioSource.Play();
             Invoke("ReloadScene", 1.5f);
         }
     }
