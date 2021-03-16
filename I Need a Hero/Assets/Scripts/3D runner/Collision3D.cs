@@ -13,6 +13,8 @@ public class Collision3D : MonoBehaviour
     bool dead = false;
     RunnerCharacterController runnerCC;
 
+    public AudioSource audioSource;
+
     private void Start()
     {
         runnerCC = GetComponent<RunnerCharacterController>();
@@ -33,6 +35,7 @@ public class Collision3D : MonoBehaviour
             if (!dead)
             {
                 Instantiate(ragdoll, transform);
+                audioSource.Play();
                 Invoke("ReloadScene", 1f);
                 dead = true;
             }
