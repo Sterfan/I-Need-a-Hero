@@ -13,7 +13,12 @@ public class WinGame : MonoBehaviour
     public GameObject blackOutSquare;
     float fadeSpeed = 1f;
     public Animator animator;
-    public AudioSource songTrack;
+    AudioSource songTrack;
+
+    private void Start()
+    {
+        songTrack = GameObject.FindGameObjectWithTag("Song").GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
