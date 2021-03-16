@@ -12,6 +12,8 @@ public class Collision : MonoBehaviour
     public string sceneName = "Final Scene";
     bool spawned = false;
 
+    public AudioSource audioSource;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Obstacle"))
@@ -29,6 +31,7 @@ public class Collision : MonoBehaviour
                 Instantiate(ragdoll, transform.position, Quaternion.identity);
                 spawned = true;
             }
+            audioSource.Play();
             Invoke("ReloadScene", 1.5f);
         }
     }
